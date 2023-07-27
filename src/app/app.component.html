@@ -117,6 +117,27 @@
         <th><a href="https://angular.io/api/common/DatePipe">date:'MMMM - dd'</a></th>
         <th>{{ fecha | date:'MMMM - dd' }}</th>
       </tr>
+      <tr>
+        <th> {{ fecha }} </th>
+        <th><a href="https://angular.io/api/common/DatePipe">date:'MMMM - dd':'':'en'</a></th>
+        <th>{{ fecha | date:'MMMM - dd':'':'en' }}</th>
+      </tr>
+      <tr>
+        <th> {{ fecha }} </th>
+        <th><a href="https://angular.io/api/common/DatePipe">date:'MMMM - dd':'':'fr'</a></th>
+        <th>{{ fecha | date:'MMMM - dd':'':'fr' }}</th>
+      </tr>
+      <tr>
+        <th> {{ fecha }} </th>
+        <th>
+          <a href="https://angular.io/api/common/DatePipe">date:'MMMM - dd':'':'{{ idioma }}'</a>
+          <br>
+          <button (click)="idioma='es'" class="mr-1 btn btn-primary">Español</button>
+          <button (click)="idioma='en'" class="mr-1 btn btn-secondary">English</button>
+          <button (click)="idioma='fr'" class="mr-1 btn btn-success">Français</button>
+        </th>
+        <th>{{ fecha | date:'MMMM - dd':'':idioma }}</th>
+      </tr>
     </tbody>
   </table>
   
