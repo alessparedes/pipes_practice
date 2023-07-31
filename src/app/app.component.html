@@ -143,6 +143,17 @@
         </th>
         <th>{{ fecha | date:'MMMM - dd':'':idioma }}</th>
       </tr>
+      <tr>
+        <th> {{ nombre }} </th>
+        <th>
+          contrasenia:{{activar}}
+          <br>
+          <button class="btn btn-outline-primary">
+            Activar/Desactivar
+          </button>
+        </th>
+        <th>{{ nombre | contrasenia:activar }}</th>
+      </tr>
     </tbody>
   </table>
   
